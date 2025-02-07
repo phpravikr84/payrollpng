@@ -3,68 +3,68 @@
     window.Laravel = {
         csrfToken: '{{ csrf_token() }}',
         routes: {
-            LeaveCalculationShow: '{{ secure_url("/hrm/leave/calculate") }}',
-            TakenDatesByUser: '{{ secure_url("/hrm/leave/taken-dates/" . auth()->id()) }}',
+            LeaveCalculationShow: '{{ url("/hrm/leave/calculate") }}',
+            TakenDatesByUser: '{{ url("/hrm/leave/taken-dates/" . auth()->id()) }}',
             GetBankTransferSetup: '{{ url("/setting/bsp_bank_transfer_setups/get-bank-transfer-setup")}}',    //-----------
-            CheckBankExists: '{{ secure_url("/setting/check-bank-exists")}}',
-            BspBankTransferSetupStore: '{{ secure_url("/setting/bsp_bank_transfer_setups/store_setting") }}',
-            BspBankTransferSetupRemove: '{{ secure_url("/setting/bsp_bank_transfer_setups/remove")}}',
-            BspBankTransferSetupUpdate: '{{ secure_url("/setting/bsp_bank_transfer_setups/update")}}',
-            BspBankSettingStore: '{{ secure_url("/setting/bsp_bank_transfer_setups/store_bank") }}',
+            CheckBankExists: '{{ url("/setting/check-bank-exists")}}',
+            BspBankTransferSetupStore: '{{ url("/setting/bsp_bank_transfer_setups/store_setting") }}',
+            BspBankTransferSetupRemove: '{{ url("/setting/bsp_bank_transfer_setups/remove")}}',
+            BspBankTransferSetupUpdate: '{{ url("/setting/bsp_bank_transfer_setups/update")}}',
+            BspBankSettingStore: '{{ url("/setting/bsp_bank_transfer_setups/store_bank") }}',
             
             GetAnzBankTransferSetup: '{{ url("/setting/anz_bank_transfer_setups/get-anz-bank-transfer-setup") }}',   //--------------
-            CheckAnzBankExists: '{{ secure_url("/setting/check-anz-bank-exists") }}',
-            AnzBankTransferSetupStore: '{{ secure_url("/setting/anz_bank_transfer_setups/store_setting") }}',
-            AnzBankTransferSetupRemove: '{{ secure_url("/setting/anz_bank_transfer_setups/remove") }}',
-            AnzBankTransferSetupUpdate: '{{ secure_url("/setting/anz_bank_transfer_setups/update") }}',
-            AnzBankSettingStore: '{{ secure_url("/setting/anz_bank_transfer_setups/store_bank") }}',
+            CheckAnzBankExists: '{{ url("/setting/check-anz-bank-exists") }}',
+            AnzBankTransferSetupStore: '{{ url("/setting/anz_bank_transfer_setups/store_setting") }}',
+            AnzBankTransferSetupRemove: '{{ url("/setting/anz_bank_transfer_setups/remove") }}',
+            AnzBankTransferSetupUpdate: '{{ url("/setting/anz_bank_transfer_setups/update") }}',
+            AnzBankSettingStore: '{{ url("/setting/anz_bank_transfer_setups/store_bank") }}',
 
              // WPAC Bank Transfer Setup
             GetWpacBankTransferSetup: '{{ url("/setting/wpac_bank_transfer_setups/get-wpac-bank-transfer-setup") }}',   //------------
-            CheckWpacBankExists: '{{ secure_url("/setting/check-wpac-bank-exists") }}',
-            WpacBankTransferSetupStore: '{{ secure_url("/setting/wpac_bank_transfer_setups/store_setting") }}',
-            WpacBankTransferSetupRemove: '{{ secure_url("/setting/wpac_bank_transfer_setups/remove") }}',
-            WpacBankTransferSetupUpdate: '{{ secure_url("/setting/wpac_bank_transfer_setups/update") }}',
-            WpacBankSettingStore: '{{ secure_url("/setting/wpac_bank_transfer_setups/store_bank") }}',
+            CheckWpacBankExists: '{{ url("/setting/check-wpac-bank-exists") }}',
+            WpacBankTransferSetupStore: '{{ url("/setting/wpac_bank_transfer_setups/store_setting") }}',
+            WpacBankTransferSetupRemove: '{{ url("/setting/wpac_bank_transfer_setups/remove") }}',
+            WpacBankTransferSetupUpdate: '{{ url("/setting/wpac_bank_transfer_setups/update") }}',
+            WpacBankSettingStore: '{{ url("/setting/wpac_bank_transfer_setups/store_bank") }}',
 
             // Kina Bank Transfer Setup
             GetKinaBankTransferSetup: '{{ url("/setting/kina_bank_transfer_setups/get-kina-bank-transfer-setup") }}',   //-------------------
-            CheckKinaBankExists: '{{ secure_url("/setting/check-kina-bank-exists") }}',
-            KinaBankTransferSetupStore: '{{ secure_url("/setting/kina_bank_transfer_setups/store_setting") }}',
-            KinaBankTransferSetupRemove: '{{ secure_url("/setting/kina_bank_transfer_setups/remove") }}',
-            KinaBankTransferSetupUpdate: '{{ secure_url("/setting/kina_bank_transfer_setups/update") }}',
-            KinaBankSettingStore: '{{ secure_url("/setting/kina_bank_transfer_setups/store_bank") }}',
+            CheckKinaBankExists: '{{ url("/setting/check-kina-bank-exists") }}',
+            KinaBankTransferSetupStore: '{{ url("/setting/kina_bank_transfer_setups/store_setting") }}',
+            KinaBankTransferSetupRemove: '{{ url("/setting/kina_bank_transfer_setups/remove") }}',
+            KinaBankTransferSetupUpdate: '{{ url("/setting/kina_bank_transfer_setups/update") }}',
+            KinaBankSettingStore: '{{ url("/setting/kina_bank_transfer_setups/store_bank") }}',
             
             //Pay Item
-            PayItemEdit : '{{ secure_url("/setting/pay_items/edit") }}',
-            PayItemDel : '{{ secure_url("/setting/pay_items/destroy") }}',
-            PayItemUpdate : '{{ secure_url("/setting/pay_items/update") }}',
-            PayItemAdd :  '{{ secure_url("/setting/pay_items/store") }}',
+            PayItemEdit : '{{ url("/setting/pay_items/edit") }}',
+            PayItemDel : '{{ url("/setting/pay_items/destroy") }}',
+            PayItemUpdate : '{{ url("/setting/pay_items/update") }}',
+            PayItemAdd :  '{{ url("/setting/pay_items/store") }}',
 
             //Pay Reference
-            SavePayRefInclEmpl : '{{ secure_url("/process_pay/pay_references/save_pay_reference") }}',
-            PayRefAddLoanRoute: '{{ secure_url("/process_pay/pay_references/pay_reference_add_loan") }}',
-            PayRefAddLeaveRoute: '{{ secure_url("/process_pay/pay_references/pay_reference_add_leave") }}',
-            PayRefEmpSlip: '{{ secure_url("/process_pay/pay_references/payslip") }}',
+            SavePayRefInclEmpl : '{{ url("/process_pay/pay_references/save_pay_reference") }}',
+            PayRefAddLoanRoute: '{{ url("/process_pay/pay_references/pay_reference_add_loan") }}',
+            PayRefAddLeaveRoute: '{{ url("/process_pay/pay_references/pay_reference_add_leave") }}',
+            PayRefEmpSlip: '{{ url("/process_pay/pay_references/payslip") }}',
             PayRefSalaryDays: '{{ url("/process_pay/pay_references/salary_days_count") }}',    //---------------
-            PayRefPayItems: '{{ secure_url("/process_pay/pay_references/submit_pay_reference_payitems") }}',
-            PayRefPayItemSubmit: '{{ secure_url("/process_pay/pay_references/payref_approved")}}',
-            PayRefPayItemReject: '{{ secure_url("/process_pay/pay_references/payref_rejected")}}',
+            PayRefPayItems: '{{ url("/process_pay/pay_references/submit_pay_reference_payitems") }}',
+            PayRefPayItemSubmit: '{{ url("/process_pay/pay_references/payref_approved")}}',
+            PayRefPayItemReject: '{{ url("/process_pay/pay_references/payref_rejected")}}',
             //Employee Payroll Calculation Route
-            EmplPayrollHRAAreaSrc: "{{ secure_url('/hrm/payroll/hra_area_src') }}",
-            EmplPayrollHRA: "{{ secure_url('/hrm/payroll/hra') }}",
-            EmplPayrollVehicle: "{{ secure_url('/hrm/payroll/vehicle') }}",
-            EmplPayrollMeals: "{{ secure_url('/hrm/payroll/meals') }}",
-            EmplPayrollTaxCal: "{{ secure_url('/hrm/payroll/taxcal') }}",
+            EmplPayrollHRAAreaSrc: "{{ url('/hrm/payroll/hra_area_src') }}",
+            EmplPayrollHRA: "{{ url('/hrm/payroll/hra') }}",
+            EmplPayrollVehicle: "{{ url('/hrm/payroll/vehicle') }}",
+            EmplPayrollMeals: "{{ url('/hrm/payroll/meals') }}",
+            EmplPayrollTaxCal: "{{ url('/hrm/payroll/taxcal') }}",
 
             //Attendance
-            AttendanceSearch: '{{ secure_url("/hrm/attendance/search") }}',
+            AttendanceSearch: '{{ url("/hrm/attendance/search") }}',
              //PayLocation
-            PayLocationBankDetails: '{{ secure_url("/setting/pay_locations/bank_detail") }}',
+            PayLocationBankDetails: '{{ url("/setting/pay_locations/bank_detail") }}',
             
             
             //Company
-            CompanyBankDetails: '{{ secure_url("/setting/company/bank_detail/") }}',
+            CompanyBankDetails: '{{ url("/setting/company/bank_detail/") }}',
            
         }
     };

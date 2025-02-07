@@ -203,7 +203,7 @@
     
     //var gross_salary = +basic_salary + +house_rent_allowance + +medical_allowance + +special_allowance + +other_allowance + +vehicle_allowance + +meals_allowance + +electricity_allowance + +security_allowance;
     var gross_salary = basic_salary + house_rent_allowance + medical_allowance + special_allowance + other_allowance + vehicle_allowance + meals_allowance + electricity_allowance + security_allowance;
-    console.log('gross_salary222: '+gross_salary);
+    console.log('gross_salary: '+gross_salary);
     //var total_deduction = parseFloat(+tax_deduction + +provident_fund_deduction + +other_deduction);
     var total_deduction = +tax_deduction_a + +provident_fund_deduction;
 

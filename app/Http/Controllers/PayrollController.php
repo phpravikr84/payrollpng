@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Payroll;
-use App\User;
-use App\HraRate;
-use App\HraAreaPlace;
-use App\Allowance;
-use App\TaxResident;
-use App\DependentRebate;
+use App\Models\Payroll;
+use App\Models\User;
+use App\Models\HraRate;
+use App\Models\HraAreaPlace;
+use App\Models\Allowance;
+use App\Models\TaxResident;
+use App\Models\DependentRebate;
 use Illuminate\Http\Request;
 
 class PayrollController extends Controller {
