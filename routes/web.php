@@ -66,7 +66,8 @@ use App\Http\Controllers\{
 	EmplContactController,
 	BankDetailController,
 	CompanyController,
-	SuperAnnuationReportController
+	SuperAnnuationReportController,
+	CostCenterController
 };
 
 header("Cache-Control: no-cache, must-revalidate");
@@ -618,6 +619,19 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::post('/update/{id}', [CompanyController::class, 'update'])->name('update');
 		Route::get('/bank_detail/{id}', [CompanyController::class, 'getBankDetails'])->name('bank_detail');
 	});
+	
+	//Cost Center
+	Route::prefix('setting/costcenters')->name('costcenters.')->group(function () {
+		Route::get('/', [CostCenterController::class, 'index'])->name('index');
+		Route::get('/create', [CostCenterController::class, 'create'])->name('create');
+		Route::post('/store', [CostCenterController::class, 'store'])->name('store');
+		Route::get('/edit/{id}', [CostCenterController::class, 'edit'])->name('edit');
+		Route::post('/update/{id}', [CostCenterController::class, 'update'])->name('update');
+		Route::delete('/delete/{id}', [CostCenterController::class, 'destroy'])->name('destroy');
+	});
+	Route::get('/get-departments-by-cost-center/{costCenterId}', [CostCenterController::class, 'getDepartmentsByCostCenter']);
+
+	
 
 	// Report
 	Route::prefix('report')->name('report.')->group(function () {

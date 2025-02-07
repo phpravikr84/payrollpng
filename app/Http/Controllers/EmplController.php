@@ -154,7 +154,9 @@ class EmplController extends Controller {
 				->select('companies.*', 'superannuations.code', 'superannuations.name')
 				->get();
 
-			return view('administrator.people.employee.add_employee', compact('designations', 'roles', 'loca_places', 'employees', 'sumOfWorkingHours', 'superannuations', 'bankDetails', 'leaveCategories', 'bankLists', 'companies', 'empl_id')); 
+				$costcenters = DB::table('cost_centers')->get();
+
+			return view('administrator.people.employee.add_employee', compact('designations', 'roles', 'loca_places', 'employees', 'sumOfWorkingHours', 'superannuations', 'bankDetails', 'leaveCategories', 'bankLists', 'companies', 'empl_id', 'costcenters')); 
 		}
 	
 	}

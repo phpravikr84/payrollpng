@@ -68,7 +68,7 @@
                             <tr>
                                 <td>{{ $sl++ }}</td>
                                 <td><a href="{{ url('/setting/departments/details/' . $department['id']) }}">{{ $department['department'] }}</a></td>
-                                <td>{{ str::limit($department['department_description'], 65) }}</td>
+                                <td>{{ $department['department_description'] }}</td>
                                 <td class="text-center">{{ date("d F Y", strtotime($department['created_at'])) }}</td>
                                 <td class="text-center">
                                     @if ($department['publication_status'] == 1)

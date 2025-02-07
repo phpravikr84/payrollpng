@@ -673,7 +673,6 @@
                                         </div>
                                         <!-- /.form-group -->
 
-
                                     <div class="col-md-4">
                                         <label for="id_name">{{ __('Photo ID Name') }}</label>
                                         <div class="form-group{{ $errors->has('id_name') ? ' has-error' : '' }} has-feedback">
@@ -766,6 +765,57 @@
                                             @endif
                                         </div>
                                     </div>
+
+
+
+                                    <!-- Cost Center New code -->
+                                    <div class="col-md-4">
+                                        <label for="cost_center">{{ __('Cost Center') }} <span class="text-danger">*</span></label>
+                                        <div class="form-group{{ $errors->has('cost_center') ? ' has-error' : '' }} has-feedback">
+                                            <select name="cost_center" id="cost_center" class="form-control">
+                                                <option value="" selected disabled>{{ __('Select one') }}</option>
+                                                @foreach($costcenters as $costcenter)
+                                                <option value="{{ $costcenter->id }}">{{ $costcenter->name }} - {{ $costcenter->cost_center_code }}</option>
+                                                @endforeach
+                                            </select>
+                                            @if ($errors->has('cost_center'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('cost_center') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="department">{{ __('Department') }} <span class="text-danger">*</span></label>
+                                        <div class="form-group{{ $errors->has('department') ? ' has-error' : '' }} has-feedback">
+                                            <select name="department[]" id="department" class="form-control" multiple>
+                                                <option value="" selected disabled>{{ __('Select one or more') }}</option>
+                                                <!-- Dynamic departments will be populated here -->
+                                            </select>
+                                            @if ($errors->has('department'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('department') }}</strong>
+                                            </span>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="cost_center_share_percentage">{{ __('Cost Center Share Percentage') }} <span class="text-danger">*</span></label>
+                                        <div id="share_percentage_fields">
+                                            <!-- Dynamic share percentage fields will be populated here -->
+                                        </div>
+                                        @if ($errors->has('cost_center_share_percentage'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('cost_center_share_percentage') }}</strong>
+                                        </span>
+                                        @endif
+                                    </div>
+                                    <!-- Cost Center New code end-->
+
+
+
                                     <div class="col-md-6">
                                         <label for="academic_qualification" class="control-label">{{ __('Academic Qualification') }}</label>
                                         <div class="form-group{{ $errors->has('academic_qualification') ? ' has-error' : '' }} has-feedback">

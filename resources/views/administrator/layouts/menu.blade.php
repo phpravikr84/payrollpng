@@ -46,7 +46,7 @@
                 <li class="nav-item">
                   <span class="text-light ml-4"> {{ __('Reference') }}</span>
                     <ul>
-                        <li><a class="nav-link" href="{{ url('/setting/leave_categories') }}"><i class="fa fa-circle-o"></i>{{ __('Manage Leave') }}</a></li>
+                    <li><a  class="nav-link" href="{{ url('/setting/costcenters') }}"><i class="fa fa-circle-o"></i>{{ __('Cost Centers') }}</a></li>
                         <li><a  class="nav-link" href="{{ url('/setting/pay_batch_numbers') }}"><i class="fa fa-circle-o"></i>{{ __('Pay Batch Number') }}</a></li>
                         <li><a  class="nav-link" href="{{ url('/setting/pay_locations') }}"><i class="fa fa-circle-o"></i>{{ __('Pay Location') }}</a></li>
                         <li><a class="nav-link" href="{{ url('/setting/gl_codes') }}"><i class="fa fa-circle-o"></i>{{ __('GL Codes') }}</a></li>
@@ -57,6 +57,7 @@
                         <li><a  class="nav-link" href="{{ route('pay_items.index') }}"><i class="fa fa-circle-o"></i>{{ __('Pay Items') }}</a></li>
                         <li><a  class="nav-link" href="{{ route('currencies.index') }}"><i class="fa fa-circle-o"></i>{{ __('Currency') }}</a></li>
                         <li><a  class="nav-link" href="{{ route('loan_master.index') }}"><i class="fa fa-circle-o"></i>{{ __('Loans') }}</a></li>
+                        <li><a class="nav-link" href="{{ url('/setting/leave_categories') }}"><i class="fa fa-circle-o"></i>{{ __('Manage Leave') }}</a></li>
                     </ul>
                 </li>
               </ul>
