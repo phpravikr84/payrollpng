@@ -12,7 +12,7 @@
                             console.log('response'+response);
                             $("#hr_area").val(response);
                             $('#hr_area').attr('value', response);
-                            console.log('HRA Area: '+hra_area1);
+                            //console.log('HRA Area: '+hra_area1);
                             if(hra_area1 == "" || hra_area1 == 'Area 3') {
                               $('#hra_amount_per_week').attr('readonly', true);
                               $('#hra_type').attr('readonly', true);
@@ -159,6 +159,14 @@
                 })
             })
 
+            // No of Dependent click
+            $('#no_of_dependent_frm').on("change", function () {
+                // Get dependent value
+                let dep = $(this).val();
+                $('#no_of_dependent').val(dep);
+            });
+            
+
       });
     })(jQuery);
 
@@ -201,8 +209,8 @@
     //var gross_salary = (+basic_salary + +house_rent_allowance + +vehicle_allowance + +meals_allowance + +electricity_allowance + +security_allowance + +medical_allowance + +special_allowance + +other_allowance);
     //var gross_salary = +basic_salary + +overtime_amt + +sales_comm + +house_rent_allowance + +medical_allowance + +special_allowance + +other_allowance + +vehicle_allowance + +meals_allowance + +electricity_allowance + +security_allowance;
     
-    //var gross_salary = +basic_salary + +house_rent_allowance + +medical_allowance + +special_allowance + +other_allowance + +vehicle_allowance + +meals_allowance + +electricity_allowance + +security_allowance;
-    var gross_salary = basic_salary + house_rent_allowance + medical_allowance + special_allowance + other_allowance + vehicle_allowance + meals_allowance + electricity_allowance + security_allowance;
+    var gross_salary = +basic_salary + +house_rent_allowance + +medical_allowance + +special_allowance + +other_allowance + +vehicle_allowance + +meals_allowance + +electricity_allowance + +security_allowance;
+    //var gross_salary = basic_salary + house_rent_allowance + medical_allowance + special_allowance + other_allowance + vehicle_allowance + meals_allowance + electricity_allowance + security_allowance;
     console.log('gross_salary222: '+gross_salary);
     //var total_deduction = parseFloat(+tax_deduction + +provident_fund_deduction + +other_deduction);
     var total_deduction = +tax_deduction_a + +provident_fund_deduction;

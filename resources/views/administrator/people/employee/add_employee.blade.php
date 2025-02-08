@@ -526,7 +526,7 @@
 
                                 <input type="hidden" name="employee_type" class="form-control" id="employee_type" value="0"/>
                                 <input type="hidden" name="resident_status" class="form-control" id="resident_status" value="1"/>
-                                <input type="hidden" name="no_of_dependent" class="form-control" id="no_of_dependent" value="2"/>
+                                <input type="hidden" name="no_of_dependent" class="form-control" id="no_of_dependent" />
                             <div class="box-body">
                                     <!-- Add your form fields here -->
                                     <?php 
@@ -801,10 +801,25 @@
                                                         <tr>
                                                             <td>{{ __('Dependents') }}</td>
                                                             <td>
-                                                                <input type="number" name="no_of_dependent" class="form-control" id="no_of_dependent_inn" value="{{ old('no_of_dependent') }}" placeholder="{{ __('Enter no. of dependent..') }}">
+                                                                <select name="no_of_dependent" class="form-control" id="no_of_dependent_frm">
+                                                                    @for ($i = 1; $i <= 5; $i++)
+                                                                        <option value="{{ $i }}">{{ $i }}</option>
+                                                                    @endfor
+                                                                </select>
                                                                 @if ($errors->has('no_of_dependent'))
                                                                     <span class="help-block">
                                                                         <strong>{{ $errors->first('no_of_dependent') }}</strong>
+                                                                    </span>
+                                                                @endif
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>{{ __('Dependent Rebate') }}</td>
+                                                            <td>
+                                                                <input type="number" name="no_of_dependent_rebate" class="form-control" id="no_of_dependent_rebate" value="{{ old('no_of_dependent_rebate') }}" placeholder="{{ __('Enter no. of dependent..') }}">
+                                                                @if ($errors->has('no_of_dependent_rebate'))
+                                                                    <span class="help-block">
+                                                                        <strong>{{ $errors->first('no_of_dependent_rebate') }}</strong>
                                                                     </span>
                                                                 @endif
                                                             </td>
